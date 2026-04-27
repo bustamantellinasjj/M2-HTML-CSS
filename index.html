@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio | JJBLL99</title>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!--ENCABEZADO: nombre y menú de navegación-->
+  <header class="encabezado">
+    <h1 class="nombre-pagina">Portafolio</h1>
+    <nav class="menu">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="mascotas.html">Mis Mascotas</a>
+    </nav>
+  </header>
+
+  <!--SECCIÓN: Sobre mí-->
+  <section id="sobre-mi" class="seccion">
+    <h2 class="titulo-seccion">Sobre mí</h2>
+
+    <div class="sobre-mi-contenido">
+      <img src="imagenes/JJ.jpeg" alt="Mi foto" class="foto-perfil">
+
+    <p>Hola, soy Juan, tengo 26 años y soy estudiante de desarrollo de software en Riwi. (Arquitecto de profesión)<br><br>
+      Me apasiona el desarrollo web y la creación de experiencias digitales que combinen funcionalidad y diseño. Actualmente estoy fortaleciendo mis conocimientos en HTML y CSS, y próximamente comenzaré con JavaScript para seguir evolucionando como desarrollador frontend.<br><br>
+      Tengo un gran interés por el diseño, ya que me permite materializar ideas y explorar distintas formas de expresión visual. Disfruto crear interfaces donde la estética y la funcionalidad coexistan.<br><br>
+      Fuera del ámbito académico, practico running, una actividad que me ayuda a desconectar, mantener disciplina y encontrar un equilibrio en mi día a día.</p>
+    </div>
+  </section>
+
+  <!--SECCIÓN: Proyectos-->
+  <section id="proyectos" class="seccion">
+    <h2 class="titulo-seccion">Proyectos</h2>
+    <ul class="lista-proyectos">
+      <li><a href="#sobre-mi">Página personal usando HTML y CSS</a></li>
+      <li><a href="mascotas.html">Galería de fotos de mis mascotas</a></li>
+      <li><a href="#contacto">Formulario de contacto</a></li>
+    </ul>
+  </section>
+
+  <!--SECCIÓN: Contacto-->
+  <section id="contacto" class="seccion">
+  <h2 class="titulo-seccion">Contacto</h2>
+
+  <form class="formulario">
+    <input type="text" placeholder="Tu nombre completo" class="campo">
+    <input type="email" placeholder="Tu correo electrónico" class="campo">
+    <input type="tel" placeholder="Tu número de teléfono" class="campo">
+    <input type="text" placeholder="Asunto" class="campo">
+
+    <!--Área de texto para el mensaje-->
+    <textarea placeholder="Escribe tu mensaje aquí..." class="campo area-mensaje"></textarea>
+
+    <button type="submit" class="boton">Enviar mensaje</button>
+
+  </form>
+</section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie">
+    <p>© 2026 Juan Jose</p>
+  </footer>
+
+</body>
+</html>

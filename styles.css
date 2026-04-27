@@ -1,0 +1,253 @@
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||
+   ESTILOS GENERALES
+   Aplica a toda la página: fuente, colores base, márgenes
+   ||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+/* Reset básico: elimina márgenes y rellenos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Afacad', sans-serif;       /* Tipografía legible */
+  background-color: #70a33f28;         /* Fondo crema suave */
+  color: #000000;                    /* Color de texto oscuro */
+  line-height: 1.6;                  /* Espaciado entre líneas */
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||
+   ENCABEZADO (header)
+   Contiene el nombre y el menú de navegación
+   ||||||||||||||||||||||||||||||||||||||||||*/
+
+.encabezado {
+  background-color: #356630dc;         /* Fondo azul oscuro */
+  color: rgb(255, 255, 255);
+  padding: 20px 40px;
+  display: flex;                     /* Flexbox: coloca elementos en fila */
+  justify-content: space-between;   /* Nombre a la izquierda, menú a la derecha */
+  align-items: center;               /* Centra verticalmente */
+}
+
+.nombre-pagina {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/*|||||||||||||||||||||||||
+   MENÚ DE NAVEGACIÓN (nav)
+   ||||||||||||||||||||||||*/
+
+.menu {
+  display: flex;                     /* Coloca los enlaces en fila */
+  gap: 20px;                         /* Espacio entre enlaces */
+}
+
+.menu a {
+  color: #ffffff;                    /* Color amarillo dorado */
+  text-decoration: none;             /* Quita el subrayado */
+  font-size: 1rem;
+}
+
+/* Hover: cambia color al pasar el mouse */
+.menu a:hover {
+  color: rgb(255, 217, 0);
+  text-decoration: underline;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||
+   SECCIONES (section)
+   Cada bloque de contenido: sobre mí, proyectos, contacto
+   ||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+.sobre-mi-contenido {
+  display: flex;        /* coloca la imagen y el texto en fila */
+  align-items: center;  /* los centra verticalmente */
+  gap: 45px;            /* espacio entre la imagen y el texto */
+}
+
+.foto-perfil {
+  width: 150px;         /* ancho de la imagen */
+  height: 150px;        /* alto de la imagen */
+  object-fit: cover;    /* recorta sin deformar */
+  border-radius: 50%;   /* la hace circular */
+  flex-shrink: 0;       /* evita que la imagen se achique */
+}
+
+/* ANIMACIÓN: define el movimiento */
+@keyframes flotar {
+  0%   { transform: translateY(-70px); } /* posición original */
+  50%  { transform: translateY(70px); } /* baja 10px */
+  100% { transform: translateY(-70px); }  /* vuelve a la original */
+}
+/* ANIMACIÓN: aplica la animación a la foto| flotar: nombre de la animación definida en @keyframes
+  3s: dura 3 segundos por ciclo completo | ease-in-out: el movimiento arranca suave, acelera y frena suave
+  infinite: se repite para siempre */
+.foto-perfil {
+  animation: flotar 8s ease-in-out infinite;
+}
+
+.seccion {
+  max-width: 1000px;                  /* Ancho máximo del contenido */
+  margin: 40px auto;                 /* Centrado horizontal con margen arriba/abajo */
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;                /* Bordes redondeados */
+  box-shadow: 0 4px 10px #58c51033; /* Sombra suave */
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #509b1e9c; /* Línea decorativa */
+  padding-bottom: 7px;
+}
+
+/* |||||||||||||||||||||||
+   LISTA DE PROYECTOS (ul)
+   ||||||||||||||||||||||| */
+
+.lista-proyectos {
+  list-style: none;                  /* Quita los puntos de la lista */
+  padding: 0;
+}
+
+.lista-proyectos li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0; /* Línea separadora entre proyectos */
+}
+
+.lista-proyectos a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.lista-proyectos a:hover {
+  color:  rgb(255, 217, 0);        /* Color amarillo al hacer hover */
+  text-decoration: underline;            
+}
+
+/*|||||||||||||||||||||||
+   FORMULARIO DE CONTACTO
+   |||||||||||||||||||||| */
+
+.formulario {
+  display: flex;                     /* Flexbox: organiza los campos */
+  flex-direction: column;            /* En columna (uno debajo del otro) */
+  gap: 15px;                         /* Espacio entre campos */
+  max-width: 500px;
+}
+
+.campo {
+  padding: 10px 15px;
+  border: 1px solid #85a33ddc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;              /* Usa la misma fuente del body */
+}
+
+.campo:focus {
+  outline: none;
+  border-color: #000000;            /* Borde oscuro al hacer clic */
+}
+
+.area-mensaje {
+  height: 150px;        /* altura del cuadro de texto */
+  resize: vertical;     /* permite que el usuario lo agrande arrastrando */
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||
+   BOTÓN: Usado en el formulario y como enlace en mascotas
+   ||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+.boton {
+  display: inline-block;
+  background-color: #2d2f3bdc;
+  color: rgb(255, 255, 255);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;            /* Para cuando se usa como enlace <a> */
+}
+
+.boton:hover {
+  background-color: #356630dc;        /* Verde al hacer hover */
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||
+   GALERÍA DE MASCOTAS (mascotas.html)
+   Muestra las tarjetas en fila usando Flexbox
+  |||||||||||||||||||||||||||||||||||||||||||| */
+
+.galeria {
+  display: flex;                     /* Coloca las tarjetas en fila */
+  flex-wrap: wrap;                   /* Si no caben, bajan a la siguiente fila */
+  gap: 25px;                         /* Espacio entre tarjetas */
+  justify-content: center;          /* Centra las tarjetas */
+}
+
+/* ||||||||||||||||||||||||||||
+   TARJETA DE MASCOTA (article)
+   |||||||||||||||||||||||||||| */
+
+.tarjeta {
+  background-color: rgb(255, 255, 246);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #58c5103f;
+  width: 260px;                      /* Ancho fijo de cada tarjeta */
+  overflow: hidden;                  /* La imagen no se sale de la tarjeta */
+  padding-bottom: 20px;
+}
+
+.imagen-mascota {
+  width: 100%;                       /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 200px;
+  object-fit: cover;                 /* Recorta la imagen sin deformarla */
+  border-radius: 8px 8px 0 0;        /* Bordes redondeados solo arriba */
+  box-shadow: 0 4px 10px #0000004f; /* Sombra en la imagen */
+}
+
+/* Hover: sombra más grande al pasar el mouse por la imagen */
+.imagen-mascota:hover {
+  box-shadow: 0 8px 20px #3e970a46;
+}
+
+.nombre-mascota {
+  font-size: 1.2rem;
+  color: #000000;
+  margin: 15px 15px 8px;
+}
+
+.tarjeta p {
+  font-size: 0.9rem;
+  color: #000000;
+  padding: 0 15px;
+}
+
+/*|||||||||||||||||||||||||||||||||
+   CONTENEDOR DEL ENLACE DE REGRESO
+   |||||||||||||||||||||||||||||||| */
+
+.contenedor-enlace {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+/* ||||||||||||||||||||||
+   PIE DE PÁGINA (footer)
+   |||||||||||||||||||||| */
+
+.pie {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
